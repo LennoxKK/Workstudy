@@ -6,7 +6,7 @@ from . import views,models,forms
 urlpatterns = [
     path("workarea/<pk>",views.WorkareaView.as_view(template_name='cutomuser/workarea.html',model=models.Workarea),name='workarea'),  # #Work day edit view - takes the check in time and check out time
     path("profile/<pk>",views.UserProfileView.as_view(template_name='cutomuser/profile.html',model=models.User),name="user-profile"),  # #Work day edit view - takes the check in time and check out time
-    path('',views.HomeView.as_view(template_name='cutomuser/home.html',model=models.Workarea) , name='home'),
+    path('',views.HomeView.as_view(template_name='cutomuser/index.html',model=models.Workarea) , name='home'),
    # path('logout/',auth_views.LogoutView.as_view(success_url = reverse_lazy('home')),name="logout"),
     path('login/',auth_views.LoginView.as_view(),name="login"),
     path('logout/',views.logout_user,name="logout"),
